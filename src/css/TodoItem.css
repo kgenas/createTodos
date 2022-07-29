@@ -1,0 +1,69 @@
+.TodoItem {
+    position: relative;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    background-color: #fafafa;
+    box-shadow: 0px 5px 50px rgba(32,35,41,0.15);
+    /* overflow: hidden; *para que todos los items si hay mucho texto muy largo solo muestra lo que es su tamanio si desbordar */
+}
+
+.TodoItem__task {
+    margin: 24px 0 24px 24px;
+    width: calc(100% - 120px);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    color: black;
+    word-break: break-all; /** si hay demaciado texto lo agrega en otra linea para que no hay desbordamiento */
+}
+
+.TodoItem__task--complete {
+    text-decoration: line-through; /** una linea en medio  del texto*/
+}
+
+.Icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    font-weight: bold;    
+    color: black;    
+}
+
+.Icon__check {
+    position: absolute;    
+    left: 12px;
+    background-image: url('../assets/icons/check.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Icon__check--active {
+    background-image: url('../assets/icons/check-active.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Icon__delete {
+    position: absolute;
+    top: -24px;
+    right: 0;
+    background-image: url('../assets/icons/delete.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Icon__delete:hover {
+    background-image: url('../assets/icons/delete-hover.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
